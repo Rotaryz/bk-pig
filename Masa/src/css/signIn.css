@@ -1,0 +1,396 @@
+@charset "UTF-8";
+html, head, body, div, p, img, input, ol, dl, dt, dd, li, ul, #foote .f_nav .email, h1, h2, h3, h4, h5, h6, button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: #999999; }
+
+ul, #foote .f_nav .email, li {
+  list-style: none; }
+
+img {
+  display: block;
+  border: 0; }
+
+/*高亮重置*/
+input {
+  outline: none; }
+
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden; }
+
+.contener {
+  width: 1200px;
+  margin: 0 auto; }
+
+.bor::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: -10px;
+  display: block;
+  padding: 0 20px;
+  background: #fff;
+  font-size: 14px;
+  color: #999999; }
+
+#heade {
+  padding: 12px 0; }
+  #heade .left, #heade .right {
+    float: left; }
+    #heade .left li, #heade .right li {
+      float: left;
+      font-size: 12px; }
+      #heade .left li a, #heade .right li a {
+        display: block;
+        padding: 0 11px;
+        border-left: 1px solid #999999; }
+        #heade .left li a span, #heade .right li a span {
+          color: #FF0000; }
+    #heade .left li:nth-child(1) a, #heade .right li:nth-child(1) a {
+      border-left: 0; }
+  #heade .right {
+    float: right; }
+
+#asided {
+  width: 36px;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: #242424;
+  color: #fff;
+  font-size: 12px;
+  z-index: 1000; }
+  #asided div {
+    padding: 20px 0 20px;
+    text-align: center;
+    position: relative; }
+    #asided div p {
+      width: 14px;
+      margin: 0 auto;
+      padding-top: 10px; }
+    #asided div .onside {
+      display: none;
+      position: absolute;
+      padding: 0 15px;
+      height: 30px;
+      background: #990100;
+      line-height: 30px;
+      color: #fff;
+      transform: translate(-108%, -70%);
+      top: 50%;
+      font-size: 16px; }
+    #asided div .onside::before {
+      content: '';
+      border: 3px solid #990100;
+      border-top: 3px solid rgba(255, 255, 255, 0);
+      border-right: 3px solid rgba(255, 255, 255, 0);
+      border-bottom: 3px solid rgba(255, 255, 255, 0);
+      position: absolute;
+      right: -6px;
+      top: 12px; }
+    #asided div span {
+      margin: 0 auto;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: #990100;
+      border-radius: 50px;
+      font-weight: 600;
+      line-height: 20px;
+      margin-top: 10px; }
+    #asided div i {
+      display: inline-block;
+      width: 20px;
+      height: 14px;
+      background: url("../css/img/sprinse.fw.png");
+      position: absolute;
+      top: 4px;
+      left: 50%;
+      margin-left: -8px; }
+    #asided div .sactive {
+      color: #990100;
+      background: #fff; }
+  #asided .acar i {
+    background-position: 0 -145px; }
+  #asided .assets i {
+    background-position: 0 -187px; }
+  #asided .indent i {
+    background-position: 0 -228px; }
+  #asided .collect i {
+    background-position: 0 -264px; }
+  #asided .phone i {
+    background-position: 0 -306px; }
+  #asided .top i, #asided .service i {
+    background-position: 0 -410px; }
+  #asided .active {
+    background: #990100; }
+  #asided .top, #asided .service {
+    position: absolute;
+    width: 100%;
+    padding: 14px 8px 14px 0;
+    bottom: 20px; }
+  #asided .service {
+    bottom: 70px;
+    padding: 12px; }
+  #asided .service i {
+    background-position: 0 -358px; }
+
+#carbox {
+  display: none;
+  position: fixed;
+  right: 36px;
+  top: 0;
+  width: 296px;
+  height: 100%;
+  z-index: 1020;
+  padding: 102px 15px;
+  box-shadow: -2px 0px 40px 2px #242424;
+  background: url("../img/car.jpg") no-repeat #fff;
+  background-position: 15px 40px; }
+  #carbox ul li, #carbox #foote .f_nav .email li, #foote .f_nav #carbox .email li {
+    font-size: 12px;
+    position: relative;
+    border: 1px solid #959595;
+    border-top: none; }
+    #carbox ul li a, #carbox #foote .f_nav .email li a, #foote .f_nav #carbox .email li a {
+      font-size: 12px;
+      color: #999999;
+      display: inline-block;
+      width: 120px;
+      float: left;
+      margin-left: 8px; }
+    #carbox ul li img, #carbox #foote .f_nav .email li img, #foote .f_nav #carbox .email li img {
+      float: left; }
+    #carbox ul li span, #carbox #foote .f_nav .email li span, #foote .f_nav #carbox .email li span {
+      float: right;
+      margin-right: 10px;
+      color: #FF0000; }
+    #carbox ul li .delete, #carbox #foote .f_nav .email li .delete, #foote .f_nav #carbox .email li .delete {
+      position: absolute;
+      right: 0px;
+      bottom: 10px;
+      color: #999999; }
+  #carbox button {
+    height: 40px;
+    width: 150px;
+    border: 1px solid #810D27;
+    background: #770B22;
+    color: #fff;
+    float: right;
+    margin-right: 10px; }
+
+#carbox::before {
+  content: '';
+  border: 3px solid #fff;
+  border-top: 3px solid rgba(255, 255, 255, 0);
+  border-right: 3px solid rgba(255, 255, 255, 0);
+  border-bottom: 3px solid rgba(255, 255, 255, 0);
+  position: absolute;
+  right: -6px;
+  top: 75px; }
+
+#logo .contener {
+  position: relative; }
+
+#logo form {
+  position: absolute;
+  right: 0; }
+  #logo form input {
+    border: 1px solid #959595;
+    width: 150px;
+    height: 20px;
+    margin-top: 20px; }
+
+#logo .brank h1 {
+  text-indent: -1000rem; }
+
+#logo .brank a {
+  display: block;
+  margin: 30px auto 20px auto;
+  width: 179px;
+  height: 53px;
+  background: url("../img/sprinse.fw.png"); }
+
+#nav a {
+  color: #666666; }
+
+#nav .clie {
+  position: relative;
+  width: 1176px;
+  margin: 0 auto; }
+  #nav .clie .c_left, #nav .clie .c_right {
+    float: left; }
+    #nav .clie .c_left li, #nav .clie .c_right li {
+      float: left;
+      margin-left: 30px;
+      position: relative;
+      height: 26px;
+      line-height: 30px; }
+      #nav .clie .c_left li a, #nav .clie .c_right li a {
+        font-size: 14px; }
+    #nav .clie .c_left .hot::before, #nav .clie .c_right .hot::before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 8px;
+      background: url("../css/img/sprinse.fw.png") 0 -70px;
+      position: absolute;
+      top: -12px;
+      left: 34px; }
+  #nav .clie .c_right {
+    float: right; }
+
+.menu {
+  position: relative;
+  z-index: 1000;
+  height: 24px; }
+  .menu .fi_menu {
+    position: relative;
+    width: 1176px;
+    margin: 0 auto; }
+    .menu .fi_menu li {
+      float: left;
+      width: 84px;
+      text-align: center;
+      position: relative; }
+      .menu .fi_menu li a {
+        font-size: 12px;
+        line-height: 2; }
+    .menu .fi_menu li:last-child {
+      float: right;
+      font-size: 12px;
+      line-height: 2; }
+    .menu .fi_menu li::after {
+      content: '';
+      display: block;
+      height: 6px;
+      width: 12px;
+      background: url("../css/img/sprinse.fw.png") 0 -50px;
+      position: absolute;
+      top: 50%;
+      margin-top: -3px;
+      right: 10px; }
+    .menu .fi_menu li:hover {
+      background: #444; }
+  .menu .se_menu {
+    display: none;
+    position: absolute;
+    background: white;
+    width: 1176px; }
+    .menu .se_menu div {
+      display: block;
+      width: 84px;
+      height: 254px;
+      float: left;
+      text-align: center;
+      border-right: 1px dotted #999999; }
+      .menu .se_menu div a {
+        display: block;
+        font-size: 12px;
+        line-height: 26px; }
+
+#foote {
+  background: #242424;
+  padding-top: 86px; }
+  #foote .f_nav {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #494949; }
+    #foote .f_nav ul, #foote .f_nav .email {
+      float: left;
+      margin: 22px 58px 0 0; }
+      #foote .f_nav ul p, #foote .f_nav .email p {
+        font-size: 12px;
+        color: #CBCBCB; }
+      #foote .f_nav ul li a, #foote .f_nav .email li a {
+        font-size: 12px;
+        line-height: 0.5; }
+    #foote .f_nav .email {
+      float: right; }
+      #foote .f_nav .email h4 {
+        line-height: 2;
+        font-size: 12px;
+        color: #CBCBCB; }
+      #foote .f_nav .email p {
+        font-size: 12px;
+        color: #999999; }
+      #foote .f_nav .email input {
+        display: block;
+        margin: 14px 0;
+        border: 1px solid #959595;
+        height: 28px;
+        width: 240px; }
+      #foote .f_nav .email button {
+        width: 54px;
+        height: 30px;
+        font-size: 14px; }
+  #foote .links ul, #foote .links .f_nav .email, #foote .f_nav .links .email {
+    width: 908px;
+    margin: 0 auto; }
+    #foote .links ul li, #foote .links .f_nav .email li, #foote .f_nav .links .email li {
+      float: left;
+      font-size: 12px;
+      margin: 30px 0 22px 18px;
+      padding-right: 18px;
+      border-right: 1px solid #494949; }
+    #foote .links ul li:last-child, #foote .links .f_nav .email li:last-child, #foote .f_nav .links .email li:last-child {
+      border-right: none; }
+  #foote .links p {
+    font-size: 12px;
+    color: #999999;
+    text-align: center;
+    line-height: 2; }
+
+#signIn {
+  height: 565px;
+  background: url("../img/sbk.jpg") no-repeat;
+  padding-top: 35px; }
+  #signIn .sign {
+    float: right;
+    width: 300px;
+    height: 476px;
+    background: #EEF3FB;
+    box-shadow: 1px 1px 100px 1px #242424;
+    padding: 30px;
+    font-size: 12px; }
+    #signIn .sign h4 {
+      font-weight: 100;
+      margin-bottom: 16px; }
+    #signIn .sign .for {
+      padding-bottom: 36px;
+      border-bottom: 1px solid #D9D9D9; }
+      #signIn .sign .for input {
+        margin-top: 10px;
+        height: 34px;
+        border: 1px solid #959595;
+        width: 100%; }
+      #signIn .sign .for #remenber {
+        width: 12px;
+        height: 12px; }
+      #signIn .sign .for .fear {
+        color: #FF0000; }
+      #signIn .sign .for button {
+        width: 140px;
+        height: 36px;
+        background: url("../css/img/sprinse.fw.png") 0 -95px;
+        text-indent: -1000em;
+        margin-top: 14px; }
+    #signIn .sign p {
+      margin-top: 32px;
+      color: #999999; }
+    #signIn .sign ul li, #signIn .sign #foote .f_nav .email li, #foote .f_nav #signIn .sign .email li {
+      float: left;
+      margin: 0 6px;
+      height: 44px;
+      margin-top: 20px; }

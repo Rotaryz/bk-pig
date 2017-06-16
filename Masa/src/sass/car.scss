@@ -1,0 +1,131 @@
+@import 'var';
+@import 'reset';
+
+.clearfix::after{
+	content:"";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+	overflow:hidden;
+}
+
+
+
+.contener{
+	width:1176px;
+	margin:$zero auto;
+}
+
+
+#heade{
+	background:url("../img/buycar.png");
+	height:88px;
+	h1{
+		text-indent: -1000em;
+	}
+}
+
+#car{
+	padding-bottom: 150px;
+	h3{
+		text-align:$c;
+	}
+	p{
+		border-bottom:$cbor #000;
+		line-height: 36px;
+		span{
+			color:$rcolor;
+		}
+	}
+	h4{
+		color:$rcolor;
+		line-height: 36px;
+	}
+	table{
+		display:$n;
+		width:100%;
+		border:2px solid #ccc;
+		border-collapse:collapse;
+		th{
+			height:26px;
+			border:$cbor #fff;
+			background: #9E9E9E;
+			color:#fff;
+			font-weight: 100;
+		}
+		button{
+			padding:5px;
+			border:$bor;
+			border-radius:3px;
+		}
+		th:nth-child(2){
+			width:350px;
+			
+		}
+		th:nth-child(6){
+			width:140px;
+			
+		}
+		td{
+			padding:8px 18px;
+			color:#796353;
+			border:$cbor #F3F3F3;
+			text-align:$c;
+		}
+		td:nth-child(2){
+			img{
+				float: $le;
+			}
+			pre{
+				width:200px;
+				float: $le;
+				line-height: 26px;
+				font-size: $fsize;
+				text-indent: 1em;
+			}
+		}
+		td:nth-child(6){
+			span{
+				display:$ib;
+				width:$fsize;
+				height:$fsize;
+				line-height: 12px;
+				border:$bor;
+				border-radius:3px;
+			}
+			input{
+				width:40px;
+				text-align:$c;
+				border:$bor;
+			}
+		}
+	}
+	.endbuy,.continue{ 
+		display:$n;
+		width:138px;
+		height:40px;
+		border:$cbor #ccc;
+		float:$ri;
+		margin:20px 10px 0 0 ;
+		border-radius:5px;
+		background:#F1E1E1;
+		font-size: 16px;
+		color:#f00;
+	}
+	.endbuy{
+		background:#8A1029;
+		color:#fff;
+	}
+}
+
+
+#footed{
+	height:40px;
+	border-top:$cbor #ccc;
+	p{
+		text-align:$c;
+		font-size: $fsize;
+		line-height: 24px;
+	}
+}

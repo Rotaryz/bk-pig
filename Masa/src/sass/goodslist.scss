@@ -1,0 +1,39 @@
+@import 'var';
+@import 'common';
+
+
+#goodslist{
+	ul{
+		li{
+			float: $le;
+			width:222px;
+			height:404px;
+			margin:15px 0 0 10px;
+			font-size: $fsize;
+			text-indent: 1em;
+			img{
+				width:100%;
+			}
+			p{
+				line-height: 20px;
+				margin-bottom: 0;
+				span{
+					color:$rcolor;
+					font-size: $tsize;
+					margin-right: 90px;
+				}
+			}
+			.comment,.size{
+				color:$color;
+			}
+		}
+	}
+}
+#liked{
+	@extend #goodslist;
+}
+
+.onside{
+	overflow:visible;
+	border:$n;
+}

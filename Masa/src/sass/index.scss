@@ -1,0 +1,224 @@
+@import 'var';
+@import 'common';
+					
+
+#banner{
+	.banbox{
+		height:500px;
+	}
+	
+	 // 轮播图暂 
+	
+}
+
+
+#fashion{
+	padding-top: 20px;
+	.bor::before{
+		content:'2 0 1 7 时 尚 风 标'
+	}
+	.notice{
+		height:30px;
+		line-height: 30px;
+		background:#F2F2F2;
+		color:$rcolor;
+		font-size: $tsize;
+		margin-bottom: 45px;
+		span{
+			display:inline-block;
+			padding:0 34px;
+		}
+	}
+	.accordion{
+		padding: 38px 0;
+		border-top:$cbor #CCCCCC;
+		.ac{
+			overflow: hidden;
+			li{
+				float: $le;
+				width:130px;
+				height:465px;
+				position: relative;
+				// z-index:-1000;
+				.change{
+					position: absolute;
+					width:100%;
+					height:465px;
+				}
+				.text{
+					position: absolute;
+					right: 0;
+					bottom: 0;
+					width:100%;
+					max-width:350px;
+					height:200px;
+					padding:0 12px;
+					background: rgba(255, 255, 255, .7);
+					h4{
+						margin-top: 14px;
+						font-size: 20px;
+						color:#737273;
+						font-weight: normal;
+						text-align:center;
+					}
+					p{
+						font-size: $tsize;
+					}
+					a{
+						font-size: $fsize;
+						color:#737273;
+						display:block;
+						text-align:center;
+					}
+				}
+				
+			}
+				
+			
+		}
+	}
+	
+	
+}
+
+#hsell{
+	padding-bottom:48px;
+	.cu_sell{
+		border-top:$cbor #CCCCCC;
+		position: relative;
+		padding-top: 34px;
+		.title{
+			text-align:center;
+			span{
+				margin:0 13px;
+				font-size: $fsize;
+			}
+			.active{
+				font-weight: 600;
+				color:#000;
+			}
+		}
+		.content{
+			height:770px;
+			ul li{
+				float: $le;
+
+				width:$width/5;
+				height:366px;
+				margin-top: 20px;
+				p{
+					font-size: $fsize;
+					text-align:center;
+					margin-top: 10px;
+				}
+				.price{
+					font-weight: 600;
+					margin-top: 0px;
+				}
+			}
+		}
+	}
+	.bor::before{
+		content:'热 销 推 荐'
+	}
+	
+}
+
+
+#theme{
+	@extend #hsell;
+	.t_all{
+		border-top:$cbor #CCCCCC;
+		position: relative;
+		padding-top: 14px;
+		div{
+			float:$le;
+			height:386px;
+			width:($width/3)-16;
+			margin-right: 16px;
+			margin-top: 20px;
+			overflow:hidden;
+			img{
+				width:100%;
+				height:100%;
+			}
+		}
+		.t_big{
+			img{
+				width:100%;
+				height:100%;
+			}
+			width:($width/3)*2-16;
+			margin-right: 16px;
+		}
+
+	}
+	.bor::before{
+		content:'活 动 主 题 篇';
+	}
+}
+
+#gift{
+	@extend #theme;
+	.g_all{
+		@extend .t_all;
+	}
+	.g_big{
+		@extend .t_big;
+	}
+	.bor::before{
+		content:'经 典 专 区';
+	}
+}
+
+
+#consult{
+	@extend #theme;
+	.con_t{
+		@extend .t_all;
+		li{
+			float:$le;
+			width:495px;
+			margin: 18px 20px 0 0 ;
+			h3{
+				font-size: 20px;
+				line-height: 74px;
+				font-weight: 100;
+				a{
+					color:$bcolor;
+				}
+				
+			}
+			p{
+				width:100%;
+				color:#666666;
+				font-size: $tsize;
+				line-height: 2;
+			}
+		}
+		li:last-child{
+			width:140px;
+			margin-right: 0;
+			a{
+				display:$blo; 
+				width:140px;
+				height:215px;
+				background:$erimg -11px ;
+			}
+		}
+	}
+	.bor::before{
+		content:'时 尚 资 讯';
+	}
+	.details{
+		font-size: $fsize;
+		color:$bcolor;
+		margin-right:438px;
+	}
+	.pic{
+		overflow:hidden;
+		width:1200px;
+		height:150px;
+		margin-top: 50px;
+	}
+}

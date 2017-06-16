@@ -1,0 +1,332 @@
+@import 'var';
+@import 'common';
+
+#goods{
+	font-size: $fsize;
+	.goods_show{
+		p{
+			height:44px;
+			a{
+				font-size: $fsize;
+				line-height: 44px;
+				color:$bcolor;
+			}
+		}
+	}
+	.goods_min{
+		float: $le;
+		width:74px;
+		height:608px;
+		margin-right: 22px;
+		.gmin img{
+			margin-bottom: 10px;
+		}
+	}
+	.goods_zoom{
+		height:600px;
+		float: $le;
+		width:474px;
+		margin-right: 36px;
+	}
+	.goods_msg{
+		overflow:hidden;
+		padding-bottom: 88px;
+		h3{
+			font-size: $tsize;
+			font-weight: 100;
+			margin-bottom: 8px;
+		}
+		.sale{
+			padding:12px 6px 7px 6px;
+			height:56px;
+			background:#F6F6F6;
+			font-size: $fsize;
+			.money{
+				color:$rcolor;
+			}
+			.s_price{
+				@extend .money;
+				font-size: 16px;
+				font-weight: 600;		
+			}
+			.o_price{
+				float:right;
+			}
+			p{
+				line-height: 0px;
+				color:#006699;
+				a{
+					color:#006699;
+					border-bottom:1px dotted $bcolor;
+				}
+				.vip{
+					display:inline-block;
+					width:25px;
+					height:14px;
+					background:$icimg;
+					margin-right: 4px;
+				}
+			}
+		}
+		h4{
+			float: left;
+			font-size: $fsize;
+			line-height: 18px;
+		}
+		.s_msg{
+
+			margin-top: 20px;
+			ul{
+				width:90%;
+				float: left;
+				padding:0 0 30px 42px;
+				li{
+					line-height: 28px;
+				}
+			}
+		}
+		.character{
+			height:18px;
+		}
+		.grade{
+			margin-top: 16px;
+		}
+
+		.chSize{
+			margin-top: 20px;
+			ul{
+				li{
+					float: left;
+					width:50px;
+					height:30px;
+					border:$cbor #A8A8A8;
+					margin-right: 6px;
+					text-align: center;
+					span{
+						display:$blo;
+						border-bottom:$bor;
+						line-height: 12px;
+					}	
+					span:last-child{
+						border-bottom: $n;
+						color:$color;
+					}
+				}
+			}
+		}
+		.number{
+			margin-top: 24px;
+			.add,.nadd{
+				display:inline-block;
+				width:10px;
+				height:10px;
+				border:$bor;
+				line-height: 8px;
+				text-align: center;
+				margin:0 3px;
+			}
+			input{
+				text-align: center;
+				width:30px;
+				border:$bor;
+				height:18px;
+			}
+			p{
+				float:right;
+				color:$rcolor;
+			}
+		}
+		button{
+			margin-top: 36px;
+			width:150px;
+			height:42px;
+			border:$cbor #C58F9C;
+			background: #F6E8E8;
+			margin-right: 12px;
+			color:#770A21;
+		}
+		.car{
+			background: #770A21;
+			color:#F6FCFC;
+		}
+		.server{
+			margin-top: 20px;
+			a{
+				display:$ib;
+				width:76px;
+				height:20px;
+				background: #F6F6F6;
+				text-align: $c;
+				border:$bor;
+				line-height: 20px;
+				margin-right: 8px;
+			}
+			div{
+				margin-top: 24px;
+				height:52px;
+				background:#F8F8F8;
+				span{
+					float:$le;
+					margin-top: 4px;
+				}
+				ul{
+					overflow:hidden;
+					li{
+						float: $le;
+						// margin:0 40px 0 44px;
+						width:220px;
+						height:26px;
+						line-height: 26px;
+						text-align: $c;
+					}
+				}
+			}
+		}
+	}
+}
+
+#goods_box{
+	.bl{
+		.title{
+			font-size: $tsize;
+			line-height: 30px;
+			border-bottom:$bor;
+		}
+		.gblist{
+			font-size: $fsize;
+			margin-top: 18px;
+			li{
+				float: $le;
+				width:225px;
+				margin-left: 10px;
+				img{
+					width:100%;
+				}
+				p{
+					line-height: 24px;
+					text-indent: 20px;
+					color:$bcolor;
+				}
+				span{
+					display:$ib;
+					text-indent: 20px;
+					color:$rcolor;
+					font-weight: 600;
+				}
+			}
+			li:nth-child(1){
+				margin-left: 0;
+			}
+		}
+		.gpic{
+			@extend .gblist;
+			margin-top: 48px;
+			li{
+				width:384px;
+				// img{
+				// 	width:100%;
+				// }
+			}
+		}
+	}
+	.bought{
+		// @extend .look;
+		// margin: 30px;
+	}
+}
+
+#goods_details{
+	.contener{
+		div{
+			padding:40px 0 44px;
+			p{
+				border-bottom:$cbor #DADADA;
+				line-height: 36px;
+			}	
+			img{
+				float: left;
+			}
+		}
+			
+		.g_comment{
+			form{
+				padding-right:80px;
+				textarea{
+					margin-top: 20px;
+					float: $ri;
+					height:114px;
+					width:964px;
+				}
+			}
+				
+		}
+		.g_buy{
+			
+			.gb_content{
+				padding:0 120px;
+				font-size: $fsize;
+				p{
+					border-bottom:$n;
+					span{
+						margin-right: 30px;
+					}
+				}
+				form{
+					.texa{
+						float: $le;
+						line-height: 102px;
+						margin-right: 24px;
+					}
+					textarea{
+						float: $le;
+						width:850px;
+						height:102px;
+						margin: 16px 0 44px;
+					}
+					select{
+						width:88px;
+					}
+					button{
+						width:80px;
+						height:30px;
+						background: #810100;
+						color:#fff;
+						float: $ri;
+						margin: 34px 40px 0 0;
+					}
+				}
+				.g_new{
+					padding: 0;
+					height:24px;
+					background:#E7E7E7;
+					padding-left:10px;
+					margin-top:30px;
+					a{
+						line-height: 24px;
+						font-size: $fsize;
+						color:#6F0019;
+					}
+				}
+			}
+		}
+		.m_pic{
+			width:1200px;
+			height:226px;
+			position: relative;
+			div{
+				position: absolute;
+				right: 170px;
+				top: 64px;
+				background:rgba(255,255,255,.7);
+				height:100px;
+				width:360px;
+				text-align: $c;
+				p{
+					border:$n;
+					line-height: 16px;
+				}
+			}
+		}
+	}
+		
+}

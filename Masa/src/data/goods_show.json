@@ -1,0 +1,19 @@
+[
+	{
+		"describe":["../img/de1.jpg","../img/de2.jpg","../img/de3.jpg","../img/de4.jpg"],
+		"show":["../img/sh1.jpg","../img/sh2.jpg","../img/sh3.jpg","../img/sh4.jpg","../img/sh5.jpg","../img/sh6.jpg","../img/sh7.jpg","../img/sh8.jpg"],
+		"size":["../img/si1.jpg"]
+	},
+	{
+		"describe":["../img/de21.jpg","../img/de22.jpg","../img/de23.jpg","../img/de24.jpg","../img/de25.jpg","../img/de26.jpg","../img/de27.jpg","../img/de28.jpg","../img/de29.jpg","../img/de210.jpg","../img/de211.jpg","../img/de212.jpg","../img/de213.jpg"],
+		"show":["../img/sh21.jpg","../img/sh22.jpg","../img/sh23.jpg","../img/sh24.jpg","../img/sh5.jpg","../img/sh6.jpg","../img/sh7.jpg","../img/sh8.jpg"],
+		"size":["../img/si1.jpg"]
+
+	},
+	{
+		"describe":["../img/de31.jpg","../img/de32.jpg","../img/de33.jpg","../img/de34.jpg"],
+		"show":["../img/sh31.jpg","../img/sh32.jpg","../img/sh33.jpg","../img/sh34.jpg","../img/sh35.jpg","../img/sh36.jpg","../img/sh37.jpg","../img/sh38.jpg","../img/sh39.jpg","../img/sh310.jpg"],
+		"size":["../img/si1.jpg"]
+	}
+]
+

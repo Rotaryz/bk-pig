@@ -1,0 +1,24 @@
+@import 'var';
+
+
+html,head,body,div,p,img,input,ol,dl,dt,dd,li,ul,h1,h2,h3,h4,h5,h6,button{
+	margin:$zero;
+	padding: $zero;
+	border: $n;
+	box-sizing:border-box;
+}
+
+a{text-decoration: $n;color:$color;}
+
+
+ul,li{list-style: none;}
+
+
+img{
+	display:$blo;
+	border:0;
+}
+/*高亮重置*/
+input{
+	outline:none;
+}

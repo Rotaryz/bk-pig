@@ -1,0 +1,5 @@
+.zx-zoom{position:relative;overflow:hidden;}
+ .zx-zoom img{display:block;}
+ .zx-zoom .minzoom{display:none;position: absolute;border:1px solid #ccc;background-color: rgba(255,255,255,.5);}
+ .zx-bigzoom{display:none;position: absolute;width:400px;height:300px;overflow:hidden;}
+ .zx-bigzoom img{position: absolute;left:0;right:0;}

@@ -1,0 +1,433 @@
+@import 'var';
+@import 'reset';
+
+
+
+.clearfix::after{
+	content:"";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+	overflow:hidden;
+}
+
+
+
+.contener{
+	width:1200px;
+	margin:$zero auto;
+}
+
+
+.bor::before{
+		content:'';
+		position: absolute;
+		left:50%;
+		transform:translate(-50%,0);
+		top: -10px;
+		display:$blo;
+		padding:$zero 20px;
+		background:#fff;
+		font-size: $tsize;
+		color:$color;
+	}	
+
+
+#heade{
+	padding:$fsize $zero;
+	.left{
+		float:$le;
+		li{
+			float:$le;
+			font-size:$fsize;
+			a{
+				display:$blo;
+				padding:$zero 11px;
+				border-left:1px solid $color;
+				span{
+					color:$rcolor;
+				}
+			}
+		};
+
+		li:nth-child(1) a{
+			border-left:0;
+		}
+	}
+	.right{
+		@extend .left;
+		float:right;
+	}
+	
+}
+
+#asided{
+	width:36px;
+	height:100%;
+	position: fixed;
+	right: 0;top: 0;
+	background:$bcolor;
+	color:#fff;
+	font-size:$fsize;
+	z-index: 1000;
+	div{
+		padding:20px 0 20px;
+		text-align:center;
+		position: relative;
+		p{
+			width:$tsize;
+			margin:0 auto;
+			padding-top: 10px;
+		}
+		.onside{
+			display:none;
+			position: absolute;
+			padding:0 15px ;
+			height:30px;
+			background:#990100;
+			line-height: 30px;
+			color:#fff;
+			transform:translate(-108%,-70%);top: 50%;
+			font-size: 16px;
+		}
+		.onside::before{
+			content:'';
+			border:3px solid #990100;
+			border-top:$jian;
+			border-right:$jian;
+			border-bottom:$jian;
+			position: absolute;
+			right: -6px;
+			top:12px;
+
+		}
+		span{
+			margin:0 auto;
+			display:block;
+			width:20px;
+			height:20px;
+			background:#990100;
+			border-radius:50px;
+			font-weight: 600;
+			
+			line-height: 20px;
+			margin-top: 10px;
+		}
+		i{
+			display:$ib;
+			width:20px;
+			height:14px;
+			background:$icimg;
+			position: absolute;
+			top: 4px;
+			left: 50%;
+			margin-left: -8px;
+		}
+
+		.sactive{
+			color:#990100;
+			background: #fff;
+			
+		}
+		
+	}
+	.acar i{
+		background-position:0 -145px;
+	}
+	.assets i{
+		background-position:0 -187px;
+	}
+	.indent i{
+		background-position:0 -228px;
+	}
+	.collect i{
+		background-position:0 -264px;
+	}
+	.phone i{
+		background-position:0 -306px;
+	}
+	
+	.top i{
+		background-position:0 -410px;
+	}
+
+	.active{
+		background: #990100;
+	}
+	.top{
+		position: absolute;
+		width:100%;
+		padding:14px 8px 14px 0 ;
+		bottom: 20px;
+	}
+	.service{
+		@extend .top;
+		bottom: 70px;
+		padding: 12px;
+	}
+	.service i{
+		background-position:0 -358px;
+	}
+}
+#carbox{
+	display:$n;
+	position: fixed;
+	right: 36px;
+	top: 0;
+	width:296px;
+	height:100%;
+	z-index:1020;
+	padding:102px 15px;
+	box-shadow:-2px 0px 40px 2px $bcolor;
+	background:url('../img/car.jpg') no-repeat #fff;
+	background-position:15px 40px;
+	ul{
+		li{
+			font-size: $fsize;
+			
+			position: relative;
+			border:$bor;
+			border-top:$n;
+			a{
+				font-size: $fsize;
+				color:$color;
+				display:$ib;
+				width:120px;
+				float: $le;
+				margin-left: 8px;
+			}
+			img{
+				float: $le;
+			}
+			span{
+				float: $ri;
+				margin-right: 10px;
+				color:$rcolor;
+			}
+			.delete{
+				position: absolute;
+				right: 0px;
+				bottom: 10px;
+				color:$color;
+			}
+		}
+	}
+	button{
+		// margin-top: 270px;
+		height:40px;
+		width:150px;
+		border:$cbor #810D27;
+		background: #770B22;
+		color:#fff;
+		float: right;
+		margin-right: 10px;
+	}
+}
+#carbox::before{
+	content:'';
+	border:3px solid #fff;
+	border-top:$jian;
+	border-right:$jian;
+	border-bottom:$jian;
+	position: absolute;
+	right: -6px;
+	top:75px;
+}
+
+
+
+
+#logo{
+	.contener{
+		position: relative;
+	}
+	form{
+		position: absolute;
+		right:0;
+		input{
+			border:$bor; 
+			width:150px;
+			height:20px;
+			margin-top: 20px;
+		}
+	}
+	.brank{
+		h1{text-indent: -1000rem;}
+		a{
+			display:$blo;
+			margin:30px auto 20px auto;
+			width:179px;
+			height:53px;
+			background:$bkimg;
+		}
+	}
+
+}
+
+#nav{
+	a{color:#666666;} 
+	.clie{
+		position: relative;
+		width:$width;
+		margin:0 auto;
+		.c_left{
+			float:$le;
+			// margin-left: 120px;
+			li{
+				float:$le;
+				margin-left:30px;
+				position: relative;
+				height:26px;
+				line-height: 30px;
+				a{
+					font-size:14px;
+				}
+			}
+
+			//若存在类名hot则是热销商品
+			.hot::before{
+				content: '';
+				display:block;
+				width:16px;
+				height:8px;
+				background:$icimg 0 -70px;
+				position: absolute;
+				top: -$fsize;left: 34px;
+			}
+		}
+		.c_right{
+			@extend .c_left;
+			float:right;
+		}
+
+		}
+	}
+	.menu{
+		position: relative;
+		z-index:1000;
+		height:24px;
+		.fi_menu{
+			position: relative;
+			width:1176px;
+			margin:0 auto;
+			
+			li{
+				float:$le;width:84px;
+				text-align:center;
+				position: relative;
+				a{font-size:$fsize;
+					line-height: 2;
+				}
+			}
+			li:last-child{
+				float:$ri;
+				font-size:$fsize;
+				line-height: 2;
+			}
+			li::after{
+				content:'';
+				display:block;
+				height:6px;
+				width:12px;
+				background:$icimg 0 -50px;
+				position: absolute;
+				top: 50%;
+				margin-top: -3px;
+				right:10px;
+			}
+			li:hover{
+				background: #444;
+			}
+		}
+		.se_menu{
+			display:none;
+			position: absolute;
+			background:rgb(255,255,255);
+			width:$width;
+			div{
+				display:$blo;
+				width:84px;
+				height:254px;
+				float:left;
+				text-align:center;
+				border-right:1px dotted $color;
+				a{
+					display:$blo;
+					font-size:$fsize;
+					line-height: 26px;
+				}
+			}
+		
+
+	}
+}
+
+#foote{
+	background:$bcolor;
+	padding-top: 86px;
+	.f_nav{
+		padding-bottom:40px;
+		border-bottom:$cbor #494949;
+		ul{
+			float: $le;
+			margin: 22px 58px 0 0 ;
+			p{
+				font-size:$fsize;
+				color:#CBCBCB;
+			}
+			li a{
+				font-size:$fsize;
+				line-height: 0.5;
+			}
+
+		}
+		.email{
+			@extend ul;
+			float:$ri;
+			h4{
+				line-height: 2;
+				font-size:$fsize;
+				color:#CBCBCB;
+			}
+			p{
+				font-size:$fsize;
+				color:$color;
+			}
+			input{
+				display:$blo;
+				margin: 14px 0;
+				border:$bor;
+				height:28px;
+				width:240px;
+			}
+			button{
+				width:54px;
+				height: 30px;
+				font-size:14px;
+			}
+		}
+	}
+	.links{
+		ul{
+			width:908px;
+			margin:0 auto;
+			li{
+				float: $le;
+				font-size: $fsize;
+				margin:30px 0 22px 18px;
+				padding-right:18px;
+				border-right:$cbor #494949;
+			}
+			li:last-child{
+				border-right:$n;
+			}
+		}
+		p{
+			font-size: $fsize;
+			color:$color;
+			text-align:center;
+			line-height: 2;
+		}
+	}
+}
