@@ -21,4 +21,4 @@ require(['config'],function(){
 				
 		})
 	})
-})
+});
