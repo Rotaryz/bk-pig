@@ -39,6 +39,7 @@ export default {
         ban: {
             bind(el, binding) {
                 var timer;
+                clearInterval(el.timer);
                 setTimeout(function(){
                     var li = el.children;
                     var banner = el.parentElement;
@@ -46,8 +47,8 @@ export default {
                     el.style.width = (li.length*100)+'%';
                     var idx= 0;
                     page[0].classList.add('active')
-                    clearInterval(timer);
-                    timer = setInterval(function() {
+                    
+                    el.timer = setInterval(function() {
                         //获取当前的位置left
                         //当个图的动画
                         for(var i=0;i<page.length;i++){
@@ -69,7 +70,7 @@ export default {
                             speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
                             //存在正负值，需取绝对值进行判断
                             if (Math.abs(speed) < 2) {
-                                clearInterval(timer);
+                                clearInterval(el.timer);
                                 speed = 0;
                                 left = target;
                             }
