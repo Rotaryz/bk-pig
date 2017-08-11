@@ -39,7 +39,7 @@ export default {
         ban: {
             bind(el, binding) {
                 var timer;
-                clearInterval(timer);
+                
                 setTimeout(function(){
                     var li = el.children;
                     var banner = el.parentElement;
@@ -62,15 +62,16 @@ export default {
                         }
                         page[idx].classList.add('active');
                         var target = -idx * banner.offsetWidth;
+                        clearInterval( el.timer);
                         // console.log(target);
-                        timer = setInterval(function() {
+                         el.timer = setInterval(function() {
                             //获取当前位置
                             var left = el.offsetLeft;
                             var speed = (target - left) / 6;
                             speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
                             //存在正负值，需取绝对值进行判断
                             if (Math.abs(speed) < 2) {
-                                clearInterval(timer);
+                                clearInterval( el.timer);
                                 speed = 0;
                                 left = target;
                             }
