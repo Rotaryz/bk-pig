@@ -1,0 +1,206 @@
+<template>
+  <view class="pop-up-windows" wx:if="{{showWindow}}">
+    <view class="window" wx:if="{{pop}}">
+      <view class="tip">{{content}}</view>
+      <view class="btn">
+        <view class="btn-item" @tap="cancel">取消
+        </view>
+        <view class="btn-item" @tap="sure">确定</view>
+      </view>
+    </view>
+    <view class="red-peck" wx:if="{{!pop}}">
+      <view class="up-header">
+        <view class="up-text">恭喜您！</view>
+        <image class="red-image" wx:if="{{imageUrl}}"
+                     src="{{imageUrl + '/defaults/share/page/pic-window_red@2x.png'}}"></image>
+      </view>
+      <view class="money">
+        <view class="money-box">
+          <view class="money-icon">¥</view>
+          <view class="mon-text" style="width:{{width}}px">{{money}}
+          </view>
+          <view class="money-icon monry-title">红包</view>
+        </view>
+      </view>
+      <view class="red-text">红包已经存在你的钱包</view>
+      <view class="red-btn" @tap="ansewr">回答认证问题，领取更多红包</view>
+    </view>
+    <image class="red-close" wx:if="{{imageUrl && !pop}}"
+                 src="{{imageUrl + '/defaults/share/page/icon-diary_del@2x.png'}}"
+                 @tap="close"></image>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import base from 'common/mixins/base'
+  import URIS from 'common/js/config'
+  import {ERR_OK} from 'api/base'
+
+  export default class popUpWindows extends wepy.component {
+    mixins = [base]
+
+    config = {
+      navigationBarTitleText: ''
+    }
+
+    data = {
+      imageUrl: URIS.image,
+      showWindow: false,
+      content: '内容不会保存，退出编辑？',
+      pop: false,
+      money: 0,
+      width: 0
+    }
+
+    infoRes(res) {
+      if (res.error === ERR_OK) {
+        return res.data
+      }
+    }
+
+    methods = {
+      cancel() {
+        this.showWindow = false
+        this.$emit('cancel')
+      },
+      sure() {
+        this.showWindow = false
+        this.$emit('sure')
+      },
+      show(content, pop, money) {
+        this.content = typeof content === 'object' ? '' : content
+        this.pop = typeof pop === 'object' ? true : pop
+        this.money = typeof money === 'object' ? 0 : money + ''
+        this.width = this.money.length * 22
+        this.showWindow = true
+      },
+      close() {
+        this.showWindow = false
+        this.$emit('close')
+      },
+      ansewr() {
+        if (wepy.getStorageSync('user_info').role) {
+          this.$parent.$navigate('/pages/name-authentication/name-authentication')
+        } else {
+          this.$parent.$navigate('/pages/answer-index/answer-index')
+        }
+      }
+    }
+  }
+</script>
+
+<style lang="stylus">
+  @import '../../common/stylus/variable'
+  @import '../../common/stylus/mixin'
+  .pop-up-windows
+    position: fixed
+    height: 100vh
+    width: 100vw
+    background: $color-mask-bgc
+    top: 0
+    left: 0
+    z-index: 9999
+    .window
+      background: $color-white
+      all-center()
+      width: 275px
+      height: 165px
+      border-radius: 4px
+      .tip
+        line-height: 124px
+        font-size: $font-size-medium
+        text-align: center
+        border-bottom :0.5px solid $color-split-line
+      .pop-line
+        height: 1px
+        background: $color-split-line
+      .btn
+        display: flex
+        height: 40px
+        .btn-item
+          flex: 1
+          height: 100%
+          line-height: 40px
+          text-align: center
+          font-size: $font-size-medium-x
+          color: $color-text-tr
+          position: relative
+          &:last-child
+            border-left :0.5px solid $color-split-line
+            color: $color-assist-pink
+          .btn-line
+            top: 0
+            right: 0
+            position: absolute
+            height: 100%
+            background: $color-split-line
+            width: 1px
+
+  .red-close
+    row-center()
+    height: 30px
+    width: @height
+    bottom: 15vw
+    z-index: 500
+
+  .red-peck
+    background: $color-white
+    all-center()
+    height: 86.4vw
+    width: 73.33vw
+    border-radius: 4px
+    .up-header
+      border-top-right-radius: 4px
+      border-top-left-radius: 4px
+      background: #FFFAED
+      height: 41.828%
+      display: flex
+      flex-direction: column
+      align-items: center
+      .red-image
+        width: 57.82%
+        height: 66.556%
+      .up-text
+        color: #F12A2A
+        font-size: 5.6vw
+        font-family: $font-family-meddle
+        margin-top: 25px
+    .money
+      font-size: 39px
+      color: $color-assist-pink
+      line-height: 1
+      height: 10.4vw
+      margin-top: 16.5px
+      position: relative
+      .money-box
+        all-center()
+        .money-icon
+          float: left
+          font-size: $font-size-large-xx
+          transform: translateY(50%)
+        .monry-title
+          float: left
+          font-size: $font-size-small
+          color: $color-text
+          transform: translateY(23px)
+          margin-left: 2px
+        .mon-text
+          width: 88px
+          float: left
+    .red-text
+      font-size: $font-size-small
+      color: $color-text-tr
+      text-align: center
+      margin-top: 12.5px
+    .red-btn
+      width: 88%
+      height: 12vw
+      line-height: 12vw
+      text-align: center
+      border: 1px solid $color-assist-pink
+      border-radius: 50px
+      color: $color-assist-pink
+      margin: 27.5px auto
+      font-size: $font-size-medium
+</style>

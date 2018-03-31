@@ -1,0 +1,332 @@
+@import "./variable"
+@import "./mixin"
+page
+  height: 100%
+  overflow: hidden
+
+.invit
+  height: 100%
+  width: 100%
+  position: relative
+  font-size: 0px
+
+.invit-bac
+  height: 100%
+  width: 100%
+.invit-bac-white
+  height: 131%
+  width: 100%
+.invit-text
+  position: absolute
+  top: 2%
+  z-index: 1
+  width: 70%
+  height: 15%
+  left: 15%
+  image
+    width: 100%
+    height: 100%
+
+.invit-bac-btn
+  width: 100%
+  height: 20%
+.invit-bac-btn.write
+  height: 45%
+.invit-text-white
+  position: absolute
+  top: 45%
+  z-index: 1
+  width: 93%
+  height: 53%
+  left: 3%
+  image
+    width: 100%
+    height: 100%
+.invit-text-white-person
+  position: absolute
+  z-index: 1
+  width: 93%
+  height: 83%
+  left: 3%
+  top: 42%
+  image
+    width: 100%
+    height: 100%
+
+.invit-li-img
+  height: 18%
+  position: absolute
+  top: -15px
+  z-index: 1
+  width: 90%
+  display: flex
+  left: 5%
+  .li-img
+    text-align: center
+    width: 23%
+    padding: 0px 5%
+
+.invit-arrow
+  height: 5%
+  position: absolute
+  top: 5%
+  z-index: 1
+  width: 100%
+  display: flex
+  .view-1
+    width: 3%
+    margin-left: 33%
+  .view-2
+    width: 3%
+    margin-left: 28%
+
+.invit-li-text
+  height: 5%
+  position: absolute
+  top: 16%
+  z-index: 1
+  width: 90%
+  display: flex
+  left: 5%
+  font-size: $font-size-small
+  text
+    text-align: center
+    width: 33%
+
+.invit-click
+  height: 15%
+  width: 80%
+  position: absolute
+  top: 33%
+  left: 10%
+  z-index: 1
+  font-size: $font-size-small
+  image
+    position: absolute
+  button
+    text-align: center
+    font-size: $font-size-large-m
+    color: $color-white
+    font-family: $font-family-regular
+  .submit
+    background: $color-theme
+    color: $color-white
+    font-size: $font-size-medium-x
+    height: 45px
+    line-height: 45px
+    width: 93.667%
+    border-radius: 50px
+    &::after
+      border: 1px solid rgba(0, 0, 0, 0)
+  .can-use
+    nomal-icon()
+    &:active
+      hover-icon()
+  .disable
+    disable-icon()
+
+.invit-my
+  position: absolute
+  line-height:40px
+  top: 64%
+  display: flex
+  width: 82%
+  left: 9%
+  padding: 8px 0px
+  font-family: $font-family-regular;
+  view:nth-child(1)
+    font-size: $font-size-medium-x
+    font-family: $font-family-regular
+    color: $color-text
+    text
+      padding-left: 15px
+      color: $color-text
+      position: relative
+    text:before
+      content: ""
+      height: 14px
+      width: 4px
+      background: $color-assist-bule
+      position: absolute
+      top:0px
+      left: 4px
+      bottom: 0px
+      margin: auto
+
+    color: $color-text
+  view:nth-child(2)
+    font-size: $font-size-small-s
+    right: 15px
+    top: 12px
+    position: absolute
+    color: $color-text-tr
+    &:after
+      content: ""
+      width: 5px
+      height: 5px
+      border-top: 1px solid #ccc
+      border-right: 1px solid #ccc
+      transform:rotate(45deg);
+      position: absolute
+      top: 1px
+      right: -10px
+
+.invit-my-li
+  position: absolute
+  top: 74%
+  display: flex
+  width: 88%
+  left: 7%
+  font-size: $font-size-medium
+  font-family: $font-family-regular
+  view
+    width: 35%
+  view:nth-child(2):before
+    content: ""
+    display: block
+    height: 30px
+    border-left: .5px solid $color-row-line
+    position: absolute
+    top: 20%
+  view:nth-child(3):before
+    content: ""
+    display: block
+    height: 30px
+    border-left: .5px solid $color-row-line
+    position: absolute
+    top: 20%
+  .rmb-color
+    display: block
+    text-align: center
+    margin: 5px 0px
+    font-size: $font-size-large-m
+    color:$color-assist-pink
+    font-family:$font-family-regular
+    text
+      .rmb-color-min
+        font-size: $font-size-medium
+
+.number
+  display: block
+  text-align: center
+  margin: 6px 0px
+  color: $color-text-d
+  font-size: $font-size-small
+  text
+    font-family:$font-family-regular
+    font-size: $font-size-large-m
+    color: $color-text
+.number.number-t
+  color: $color-text-tr
+.invit-form
+  position:absolute
+  top:30%
+  width:80%
+  left:10%
+  .invit-form-title
+    text-align: center
+    color: $color-text
+    font-size: $font-size-large
+    font-family: $font-family-regular
+  .invit-form-v
+    font-size: $font-size-medium
+    border-bottom: .5px solid $color-row-line
+    display: flex
+    height: 9vh
+    position: relative
+    align-items: flex-end
+    input
+      width: 66%
+      height: 39px
+      color: $color-text
+      font-size: $font-size-medium-x
+      font-family: $font-family-regular
+    .placeholder
+      color: $color-placeholder
+      font-family: $font-family-light
+
+    .invit-form-v-picker
+      width: 70%
+      height: 39px
+      line-height: 34px
+      font-family: $font-family-regular
+      font-size: 16px
+      .text-default
+        color: $color-placeholder
+        font-family: $font-family-light
+      .eye
+        image
+          top:60%
+
+    .invit-form-v-getcode
+      border-left: 0.5px solid $color-row-line
+      padding-left: 10px
+      height: 16px
+      font-size: $font-size-medium
+      color: $color-placeholder
+      line-height: 16px
+      margin-bottom: 13px
+    .invit-form-v-getcode.set-code
+      color: $color-text
+    .eye
+      position:absolute
+      height:100%
+      width:18%
+      right:0
+      top:0
+      z-index:150
+      image
+        position:absolute
+        position:absolute
+        top:63%
+        -webkit-transform:translateY(-50%)
+        -moz-transform:translateY(-50%)
+        transform:translateY(-50%)
+        width:18px
+        height:18px
+        right:10px
+    input::-webkit-input-placeholder
+      color: #CCCCCC
+
+  .invit-form-v-submit
+    width: 100%
+    margin: 0px auto
+    .submit
+      background: $color-theme
+      color: $color-white
+      font-size: $font-size-medium-x
+      height: 45px
+      line-height: 45px
+      width: 95.667%
+      border-radius: 50px
+      &::after
+        border: 1px solid rgba(0, 0, 0, 0)
+    .can-use
+      nomal-icon()
+      &:active
+        hover-icon()
+    .disable
+      disable-icon()
+.form-msg
+  font-size: $font-size-small-s
+  color: red
+  text-align: center
+  height: 16px
+  line-height: 16px
+
+.right-activity
+  position: absolute
+  top: 14%
+  right: 0px
+  z-index: 5
+  width: 60px
+  height: 24px
+  line-height:26px;
+  background-color: #fff
+  border-radius: 15px 0px 0px 15px
+  text-align: center
+  font-size: 10px
+  color: $color-assist-pink
+  text-indent:6px;
+
+
