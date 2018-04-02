@@ -1,7 +1,7 @@
 {
-  "name": "share",
+  "name": "examination",
   "version": "1.2.8",
-  "description": "共享美导",
+  "description": "高考录取概率预测",
   "main": "dist/app.js",
   "scripts": {
     "dev": "wepy build --watch",

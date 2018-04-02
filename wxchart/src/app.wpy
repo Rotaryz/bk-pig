@@ -63,8 +63,8 @@
       window: {
         backgroundColor: '#F9F9F9',
         backgroundTextStyle: 'light',
-        navigationBarBackgroundColor: '#fff',
-        navigationBarTitleText: '共享美导',
+        navigationBarBackgroundColor: '#ff4141',
+        navigationBarTitleText: '',
         navigationBarTextStyle: 'black'
       },
       tabBar: {
