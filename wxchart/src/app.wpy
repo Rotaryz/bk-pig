@@ -20,8 +20,6 @@
     }
 
     _applySocket() {
-      const socket = io(URIS.socket)
-      this.globalData.socket = socket
     }
 
     isObject(item) {
@@ -73,25 +71,7 @@
         color: '#BEBEBE',
         selectedColor: '#706B82',
         backgroundColor: '#fff',
-        borderStyle: 'black',
-        list: [
-          {
-            pagePath: 'pages/login/login',
-            text: '美导',
-            iconPath: './common/image/icon-tab_home2@2x.png',
-            selectedIconPath: './common/image/icon-tab_home1@2x.png'
-          }, {
-            pagePath: 'pages/register/register',
-            text: '发现',
-            iconPath: './common/image/icon-tab_find2@2x.png',
-            selectedIconPath: './common/image/icon-tab_find1@2x.png'
-          }, {
-            pagePath: 'pages/forget/forget',
-            text: '我的',
-            iconPath: './common/image/icon-tab_mine2@2x.png',
-            selectedIconPath: './common/image/icon-tab_mine1@2x.png'
-          }
-        ]
+        borderStyle: 'black'
       }
     }
 

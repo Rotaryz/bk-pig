@@ -1,0 +1,36 @@
+<template>
+  <view class="tab">
+    <view wx:for="1234" :key="{{index}}" class="tab-item {{tabIndex === index ? 'tab-item-active' : ''}}">
+      <image class="tabImage"></image>
+      <view class="tabTitle"></view>
+    </view>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import base from 'common/mixins/base'
+  import URIS from 'common/js/config'
+  export default class tab extends wepy.component {
+    mixins = [base]
+    props = {
+      tabIndex: {
+        type: Number,
+        default: 0
+      }
+    }
+    methods = {
+      checkTab(index) {
+        this.tabIndex = index
+      }
+    }
+    data = {
+      imageUrl: URIS.image
+    }
+  }
+</script>
+
+<style lang="stylus">
+  @import '../../common/stylus/variable'
+  @import '../../common/stylus/mixin'
+</style>
